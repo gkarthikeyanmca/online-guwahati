@@ -1,0 +1,57 @@
+<div class="footer-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-xs-12">
+            <h4>Important Links</h4>
+            <?php
+              wp_nav_menu( array(
+                  'menu'              => 'Footer Menu',
+                  'theme_location'    => 'footer_menu',
+                  'menu_class'        => 'important-links'
+                )
+              );
+            ?>
+          </div>
+          <div class="col-sm-3 col-xs-12">
+            <h4>Tags</h4>
+            <div class="tagcloud">
+              <?php wp_tag_cloud(); ?>
+            </div>
+          </div>
+          <div class="col-sm-3 col-xs-12">
+            <div class="address-wrapper">
+              <p>
+                <i class="fa fa-home" aria-hidden="true"></i> #793, 2nd Floor, 1st Block, 1st Stage, HBR Layout,Bangalore Karnataka - 56004
+              </p>
+              <p>
+                <i class="fa fa-phone" aria-hidden="true"></i> Tel. +91 9480115687, +91 9945858107
+              </p>
+              <p>
+                <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@onlineguwahati.com">e-Mail: info@onlineguwahati.com</a>
+              </p>
+              <p>
+                <i class="fa fa-skype" aria-hidden="true"></i> <a href="skype:gizmeon.technologies">gizmeon.technologies</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 copyright-wrapper">
+            <a href=""><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>
+            <span>Copyright Gizmeon Technologies Pvt Ltd .All Rights Reserved &copy; 2016</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/custom-scripts.js"></script>
+    <?php wp_footer(); ?>
+  </body>
+</html>
