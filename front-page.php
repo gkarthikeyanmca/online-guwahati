@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php echo do_shortcode('[crellyslider alias="home"]'); ?>
 <?php
 // check if the flexible content field has rows of data
 if( have_rows('home_layout') ):
@@ -156,7 +157,13 @@ if( have_rows('home_layout') ):
                             </div>
                             <p class="read-more-wrapper">
                               <a href="<?php the_permalink(); ?>" class="read-more"><i class="fa fa-chevron-right" aria-hidden="true"></i> Read More</a>
-                              <a href="" class="pull-right loved-it"><i class="fa fa-heart" aria-hidden="true"></i> 4</a>
+                              <?php
+                                $count=get_post_meta(get_the_ID(),'loved',true);
+                                if($count==''){
+                                  $count=0;
+                                }
+                              ?>
+                              <a href="javascript:void(0);" class="pull-right loved-it" pid="<?php the_ID(); ?>"><i class="fa fa-heart" aria-hidden="true"></i> <span class="loved-count"><?php echo $count; ?></span></a>
                             </p>
                           </div>
                           <?php

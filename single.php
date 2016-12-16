@@ -31,7 +31,13 @@
 										<a href=""><i class="fa fa-print" aria-hidden="true"></i></a>
 										<a href="javascript: void(0);" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="" class="single-post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
 										<a href=""><i class="fa fa-comments-o" aria-hidden="true"></i> 2</a>
-										<a href=""><i class="fa fa-heart" aria-hidden="true"></i> 4</a>
+										<?php
+			                                $count=get_post_meta(get_the_ID(),'loved',true);
+			                                if($count==''){
+			                                  $count=0;
+			                                }
+			                            ?>
+										<a href="javascript:void(0);" class="loved-it" pid="<?php the_ID(); ?>"><i class="fa fa-heart" aria-hidden="true"></i> <span class="loved-count"><?php echo $count; ?></span></a>
 									</div>
 								</div>
 								<div id="share-html" style="display:none;">
@@ -48,6 +54,11 @@
 					endwhile;
 				endif;
 			?>
+		</div>
+	</div>
+	<div class="row section-wrapper comments-wrapper">
+		<div class="col-lg-12">
+			<?php comment_form(); ?>
 		</div>
 	</div>
 </div>

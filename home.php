@@ -21,7 +21,13 @@
 										<ul>
 											<li><a href="javascript: void(0);" share-html="<?php echo $count; ?>" data-placement="top" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
 											<li><a href=""><i class="fa fa-comments-o" aria-hidden="true"></i><br/>2</a></li>
-											<li><a href=""><i class="fa fa-heart" aria-hidden="true"></i><br/>4</a></li>
+											<?php
+				                                $count=get_post_meta(get_the_ID(),'loved',true);
+				                                if($count==''){
+				                                  $count=0;
+				                                }
+				                            ?>
+											<li><a href="javascript:void(0);" class="loved-it" pid="<?php the_ID(); ?>"><i class="fa fa-heart" aria-hidden="true"></i><br/><span class="loved-count"><?php echo $count; ?></span></a></li>
 										</ul>
 									</div>
 								</div>

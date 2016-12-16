@@ -53,5 +53,21 @@
     <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/custom-scripts.js"></script>
     <?php wp_footer(); ?>
+    <script>
+      jQuery(document).ready(function(){
+        jQuery(document).on('click','.loved-it',function(){
+          var pid=jQuery(this).attr('pid');
+          var t=this;
+          jQuery.ajax({
+              url:'<?php echo admin_url("admin-ajax.php"); ?>',
+              method:'post',
+              data:{'pid':pid,'action':'love_this_post'},
+              success:function(data){
+                jQuery(t).find('span.loved-count').html(data);
+              }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

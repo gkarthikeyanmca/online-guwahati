@@ -63,4 +63,21 @@
   		return $classes;
 	}
 	add_filter('nav_menu_css_class','custom_menu_classes',1,3);
+
+	add_action('wp_ajax_love_this_post','love_this_post');
+	add_action('wp_ajax_nopriv_love_this_post','love_this_post');
+	function love_this_post(){
+		$id=$_POST['pid'];
+		$count=get_post_meta($id,'loved',true);
+		if($count==''){
+			$count=1;
+			update_post_meta($id,'loved',$count);
+		}
+		else{
+			$count=$count+1;
+			update_post_meta($id,'loved',$count);
+		}
+		echo $count;
+		exit;
+	}
 ?>
