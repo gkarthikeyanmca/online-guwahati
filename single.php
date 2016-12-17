@@ -24,12 +24,16 @@
 							<h3><strong><?php the_title(); ?></strong></h3>
 							<div class="row post-meta-wrapper">
 								<div class="col-sm-8 col-xs-12">
-									By <a href="<?php the_author_link(); ?>"><?php the_author(); ?></a> Posted <?php the_date(); ?> In <?php the_category( ' ' ); ?>
+									<?php
+										$archive_year=get_the_time('Y');
+										$archive_month=get_the_time('m');
+									?>
+									By <a href="<?php the_author_link(); ?>"><?php the_author(); ?></a> Posted <a href="<?php echo get_month_link( $archive_year, $archive_month ); ?>"><?php the_date(); ?></a> In <?php the_category( ' ' ); ?>
 								</div>
 								<div class="col-sm-4 col-xs-12">
 									<div class="share-icons">
 										<a href=""><i class="fa fa-print" aria-hidden="true"></i></a>
-										<a href="javascript: void(0);" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="" class="single-post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+										<a href="javascript: void(0);" data-placement="bottom" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="single-post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
 										<a href=""><i class="fa fa-comments-o" aria-hidden="true"></i> 2</a>
 										<?php
 			                                $count=get_post_meta(get_the_ID(),'loved',true);
@@ -58,7 +62,7 @@
 	</div>
 	<div class="row section-wrapper comments-wrapper">
 		<div class="col-lg-12">
-			<?php comment_form(); ?>
+			<?php comments_template(); ?> 
 		</div>
 	</div>
 </div>

@@ -500,3 +500,43 @@ color:#fff !important;
 color:#fff !important;
 font-size:24px !important;
 }
+
+/* Comment Form */
+form#commentform {
+    margin-bottom: 40px
+}
+	form#commentform textarea, form#commentform input[type="text"] {
+	    display: block;
+	    width: 100%;
+	}
+	form#commentform input[type="submit"]{
+		background: #f97352;
+	    border: 0;
+	    color: #fff;
+	    padding: 12px 26px;
+	    margin-top: 17px;
+	    text-transform: uppercase;
+    	font-size: 13px;
+	}
+h3#comments{
+	text-transform: none;
+	margin-bottom: 25px;
+}
+ol.commentlist{
+	padding-left: 0;
+}
+	ol.commentlist li{
+		list-style-type: none;
+	}
+		ol.commentlist li .comment-body{
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px dotted;
+		}
+.comment-respond{
+	margin-top: 40px;
+	padding-top: 40px;
+}
+h3.comment-reply-title,.comment-notes{
+	text-align: center;
+}

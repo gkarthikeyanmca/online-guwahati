@@ -9,6 +9,21 @@
 	#primary-nav-wrapper,#primary-nav-wrapper li:last-child a{
 		padding-right: 0 !important;
 	}
+	form#commentform .comment-form-author,
+	form#commentform .comment-form-email,
+	form#commentform .comment-form-url{
+		width: 32%;
+	}
+	form#commentform .comment-form-author,
+	form#commentform .comment-form-email{
+		float: left;
+	}
+	form#commentform .comment-form-url{
+		float: right;
+	}
+	form#commentform .comment-form-email{
+		margin-left: 2%;
+	}
 }
 
 @media only screen and (max-width: 768px) {

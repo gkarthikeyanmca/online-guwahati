@@ -22,12 +22,12 @@
 											<li><a href="javascript: void(0);" share-html="<?php echo $count; ?>" data-placement="top" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
 											<li><a href=""><i class="fa fa-comments-o" aria-hidden="true"></i><br/>2</a></li>
 											<?php
-				                                $count=get_post_meta(get_the_ID(),'loved',true);
-				                                if($count==''){
-				                                  $count=0;
+				                                $lcount=get_post_meta(get_the_ID(),'loved',true);
+				                                if($lcount==''){
+				                                  $lcount=0;
 				                                }
 				                            ?>
-											<li><a href="javascript:void(0);" class="loved-it" pid="<?php the_ID(); ?>"><i class="fa fa-heart" aria-hidden="true"></i><br/><span class="loved-count"><?php echo $count; ?></span></a></li>
+											<li><a href="javascript:void(0);" class="loved-it" pid="<?php the_ID(); ?>"><i class="fa fa-heart" aria-hidden="true"></i><br/><span class="loved-count"><?php echo $lcount; ?></span></a></li>
 										</ul>
 									</div>
 								</div>
@@ -45,11 +45,21 @@
 								</div>
 							</div>
 							<div id="share-html<?php echo $count; ?>" style="display:none;">
-								<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><br/>
-								<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><br/>
-								<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><br/>
-								<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a><br/>
-								<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+								<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+								</a><br/>
+								<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="http://twitter.com/home?status=<?php echo get_the_title(); ?>+<?php echo get_permalink(); ?>">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
+								</a><br/>
+								<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>&source=<?php echo home_url(); ?>">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
+								</a><br/>
+								<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>">
+									<i class="fa fa-google-plus" aria-hidden="true"></i>
+								</a><br/>
+								<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="https://pinterest.com/pin/create/button/?url=<?php echo esc_url(get_permalink()); ?>&media=<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
+									<i class="fa fa-pinterest" aria-hidden="true"></i>
+								</a>
 							</div>
 						</div>
 						<?php
