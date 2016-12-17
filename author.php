@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+
+<div class="single-title-wrapper">
+	<div class="container">
+		<h4>Author Posts</h4>
+	</div>
+</div>
+			
 <div class="container blog-wrapper">
 	<div class="row section-wrapper">
 		<div class="col-md-9 col-sm-8 col-xs-12">

@@ -32,6 +32,7 @@
 	add_image_size( 'blog-single', 1200, 400, true );
 	add_image_size( 'contact-us-image', 820, 150, true );
 	add_image_size( 'blog-archive-image', 800, 350, true );
+	add_image_size( 'recent-posts-image', 250, 200, true );
 	
 	register_nav_menus( 
 		array( 

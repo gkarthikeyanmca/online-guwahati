@@ -356,6 +356,50 @@ body.logged-in nav.navbar{
 			.single-post .post-meta-wrapper .popover.bottom > .arrow:after{
 				border-bottom-color: #333;
 			}
+	.single-post .author-wrapper,
+	.single-post .recent-posts-wrapper,
+	.single-post .comments-wrapper{
+		padding-top: 30px;
+		border-top: 2px solid #ddd;
+	}
+		.single-post .author-wrapper img{
+			float: left;
+		    border-radius: 50%;
+		    margin-right: 30px;
+		    margin-bottom: 80px;
+		}
+		.single-post .author-wrapper a{
+			text-decoration: none !important;
+			color: #777;
+			font-weight: 800;
+		}
+			.single-post .author-wrapper h4 a:hover{
+				color: #f97352;
+			}
+		.single-post .author-wrapper i{			
+			font-size: 18px;
+		}
+	.single-post .recent-posts-wrapper .thumbnail{
+		padding: 0;
+		border-radius: 0;
+	}
+		.single-post .recent-posts-wrapper .thumbnail img{
+			margin: 0;
+			min-width: 100%;
+		}
+		.single-post .recent-posts-wrapper .thumbnail a{
+			text-decoration: none;
+		}
+		.single-post .recent-posts-wrapper .thumbnail h5{
+			text-transform: uppercase;
+			font-weight: 800;
+		}
+		.single-post .recent-posts-wrapper h4{
+			margin-bottom: 40px;
+			text-align: center;
+			font-weight: 800;
+			text-transform: uppercase;
+		}
 
 /* Contac us */
 .contact-wrapper h3,
@@ -390,31 +434,31 @@ body.logged-in nav.navbar{
 }
 
 /* Blog Page */
-.blog .blog-item{
+.blog-wrapper .blog-item{
 	margin-bottom: 50px;
 }
-	.blog .blog-item h3{
+	.blog-wrapper .blog-item h3{
 		color: #000;
 		text-transform: uppercase;
 	}
-	.blog .blog-item .fimage img{
+	.blog-wrapper .blog-item .fimage img{
 		min-width: 100%;
 		height: auto;
 		margin-bottom: 30px;
 	}
-	.blog .blog-item .post-meta-wrapper{
+	.blog-wrapper .blog-item .post-meta-wrapper{
 		font-size: 12px;
 		font-style: italic;
 		margin-bottom: 20px;
 	}
-		.blog .blog-item .post-meta-wrapper a{
+		.blog-wrapper .blog-item .post-meta-wrapper a{
 			font-size: 12px;
 			font-style: italic;
 		}
-	.blog .blog-item .read-more-wrapper{
+	.blog-wrapper .blog-item .read-more-wrapper{
 		margin-top: 30px;
 	}
-		.blog .blog-item .read-more-wrapper a{
+		.blog-wrapper .blog-item .read-more-wrapper a{
 			padding: 14px 20px;
 			background: #f97352;
 			color: #fff;
@@ -423,10 +467,10 @@ body.logged-in nav.navbar{
 			font-weight: 800;
 			text-decoration: none;
 		}
-	.blog .blog-item ul{
+	.blog-wrapper .blog-item ul{
 		padding-left: 0;
 	}
-		.blog .blog-item ul li{
+		.blog-wrapper .blog-item ul li{
 			list-style-type: none;
 			padding: 15px 20px;
 			border-bottom: 1px solid #eee;
@@ -434,34 +478,34 @@ body.logged-in nav.navbar{
 			margin: 0;
 			line-height: 20px;
 		}
-			.blog .blog-item ul li:last-child{
+			.blog-wrapper .blog-item ul li:last-child{
 				border-bottom: 0;
 			}
-			.blog .blog-item ul li a{
+			.blog-wrapper .blog-item ul li a{
 				text-decoration: none;
 				color: #777;
 			}
-			.blog .blog-item .popover-content a{
+			.blog-wrapper .blog-item .popover-content a{
 				margin-bottom: 15px;
 				display: inline-block;
 			}
-			.blog .blog-item .popover-content a:last-child{
+			.blog-wrapper .blog-item .popover-content a:last-child{
 				margin-bottom: 0px;
 			}
-			.blog .blog-item .popover-content a:hover{
+			.blog-wrapper .blog-item .popover-content a:hover{
 				color: #fff;
 			}			
-			.blog .blog-item .popover-title{
+			.blog-wrapper .blog-item .popover-title{
 				display: none;
 			}
-			.blog .blog-item .popover,
-			.blog .blog-item .popover-content{
+			.blog-wrapper .blog-item .popover,
+			.blog-wrapper .blog-item .popover-content{
 				background: #333 !important;
 			}
-			.blog .blog-item .popover-content{
+			.blog-wrapper .blog-item .popover-content{
 				padding-left: 19px;
 			}
-			.blog .blog-item .popover.top > .arrow:after{
+			.blog-wrapper .blog-item .popover.top > .arrow:after{
 				border-top-color: #333;
 			}
 
@@ -503,7 +547,7 @@ font-size:24px !important;
 
 /* Comment Form */
 form#commentform {
-    margin-bottom: 40px
+    /*margin-bottom: 40px;*/
 }
 	form#commentform textarea, form#commentform input[type="text"] {
 	    display: block;
@@ -535,7 +579,6 @@ ol.commentlist{
 		}
 .comment-respond{
 	margin-top: 40px;
-	padding-top: 40px;
 }
 h3.comment-reply-title,.comment-notes{
 	text-align: center;
