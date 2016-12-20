@@ -69,5 +69,6 @@
         });
       });
     </script>
+    <a href="javascript:void(0);" id="back-to-top" title="Back to top">&uarr;</a>
   </body>
 </html>

@@ -89,4 +89,9 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <?php
+      if(is_front_page()){
+        echo do_shortcode('[crellyslider alias="home"]');
+      }
+    ?>
     <!--Primary Navbar End -->

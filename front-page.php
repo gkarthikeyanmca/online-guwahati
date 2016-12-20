@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php echo do_shortcode('[crellyslider alias="home"]'); ?>
 <?php
 // check if the flexible content field has rows of data
 if( have_rows('home_layout') ):
