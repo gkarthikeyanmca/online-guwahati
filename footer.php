@@ -42,8 +42,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 copyright-wrapper">
-            <a href=""><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>
-            <span>Copyright Gizmeon Technologies Pvt Ltd .All Rights Reserved &copy; 2016</span>
+            <!--<a href=""><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>-->
+            <strong style="color: #fff">ONLINE GUWAHATI</strong>
+            <span><?php the_field('copyright_text','option'); ?></span>
           </div>
         </div>
       </div>
@@ -69,6 +70,11 @@
         });
       });
     </script>
+    <div class="contact-us-form" style="display:none;">
+      <p><center>Please share your Phone Number/short description on project . We shall get back to you soon.</center></p>
+      <?php echo do_shortcode('[formidable id=7]'); ?>
+    </div>
     <a href="javascript:void(0);" id="back-to-top" title="Back to top">&uarr;</a>
+    <a href="javascript: void(0);" data-placement="top" data-toggle="popover" data-trigger="click" title="CONTACT US" data-content="" class="contact-us"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
   </body>
 </html>

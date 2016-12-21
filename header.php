@@ -11,8 +11,10 @@
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url'); ?>/css/dropdown-onhover.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_url'); ?>/css/media-queries.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet">
+    <!--<link href="<?php bloginfo('template_url'); ?>/css/media-queries.css" rel="stylesheet">-->
+    <!--<link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet">-->
+    <link href="<?php bloginfo('template_directory'); ?>/css/media-queries.php" rel="stylesheet">
+    <link href="<?php bloginfo('template_directory'); ?>/style.php" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -72,7 +74,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>
+          <!--<a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>-->
+          <a class="navbar-brand" href="#"><strong>ONLINE GUWAHATI</strong></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

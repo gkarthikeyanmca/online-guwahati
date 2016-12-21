@@ -12,6 +12,15 @@ jQuery(document).ready(function($){
             return jQuery('#share-html'+count).html();
         }
     });
+
+    $('.contact-us').popover({
+        html: true,
+        content: function () {
+            var cform=jQuery('.contact-us-form').html();
+            return cform;
+        }
+    });
+
 	$(window).on('scroll', function() {
         if ($(window).scrollTop() >= 30) {
             if($('body').hasClass('logged-in')){
