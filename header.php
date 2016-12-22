@@ -74,8 +74,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!--<a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>-->
-          <a class="navbar-brand" href="#"><strong>ONLINE GUWAHATI</strong></a>
+          <?php
+            $logo_id=get_field('logo','option');
+            if($logo_id!=''){
+              $img=wp_get_attachment_image_src($logo_id,'logo-image');
+              ?>
+              <a class="navbar-brand" href="#"><img src="<?php echo $img[0]; ?>" /></a>
+              <?php
+            }
+          ?>
+          <!--<a class="navbar-brand" href="#"><strong>ONLINE GUWAHATI</strong></a>-->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

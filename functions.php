@@ -33,6 +33,7 @@
 	add_image_size( 'contact-us-image', 820, 150, true );
 	add_image_size( 'blog-archive-image', 800, 350, true );
 	add_image_size( 'recent-posts-image', 250, 200, true );
+	add_image_size( 'logo-image', 150, 38, true );
 	
 	register_nav_menus( 
 		array( 

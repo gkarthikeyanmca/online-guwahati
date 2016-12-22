@@ -20,18 +20,42 @@
           </div>
           <div class="col-sm-3 col-xs-12">
             <div class="address-wrapper">
-              <p>
-                <i class="fa fa-home" aria-hidden="true"></i> #793, 2nd Floor, 1st Block, 1st Stage, HBR Layout,Bangalore Karnataka - 56004
-              </p>
-              <p>
-                <i class="fa fa-phone" aria-hidden="true"></i> Tel. +91 9480115687, +91 9945858107
-              </p>
-              <p>
-                <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@onlineguwahati.com">e-Mail: info@onlineguwahati.com</a>
-              </p>
-              <p>
+              <?php
+                if(have_rows('locations','option')):
+                  while(have_rows('locations','option')): the_row();
+                    ?>
+                    <p>
+                      <i class="fa fa-home" aria-hidden="true"></i> <?php the_sub_field('location_address'); ?>
+                    </p>
+                    <?php
+                    break;
+                  endwhile;
+                endif;
+              ?>
+              <?php
+                if(have_rows('phone_numbers','option')):
+                  while(have_rows('phone_numbers','option')): the_row();
+                    ?>
+                    <p>
+                      <i class="fa fa-phone" aria-hidden="true"></i> <?php the_sub_field('phone_number'); ?>
+                    </p>
+                    <?php
+                    break;
+                  endwhile;
+                endif;
+              ?>
+              <?php
+                if(get_field('email','option')){
+                  ?>
+                  <p>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@onlineguwahati.com">e-Mail: info@onlineguwahati.com</a>
+                  </p>
+                  <?php
+                }
+              ?>              
+              <!--<p>
                 <i class="fa fa-skype" aria-hidden="true"></i> <a href="skype:gizmeon.technologies">gizmeon.technologies</a>
-              </p>
+              </p>-->
             </div>
           </div>
         </div>
@@ -42,8 +66,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 copyright-wrapper">
-            <!--<a href=""><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>-->
-            <strong style="color: #fff">ONLINE GUWAHATI</strong>
+            <?php
+              $logo_id=get_field('logo','option');
+              if($logo_id!=''){
+                $img=wp_get_attachment_image_src($logo_id,'logo-image');
+                ?>
+                <a href="<?php echo home_url(); ?>"><img src="<?php echo $img[0]; ?>" /></a>
+                <?php
+              }
+            ?>
+            <!--<strong style="color: #fff">ONLINE GUWAHATI</strong>-->
             <span><?php the_field('copyright_text','option'); ?></span>
           </div>
         </div>
@@ -72,9 +104,28 @@
     </script>
     <div class="contact-us-form" style="display:none;">
       <p><center>Please share your Phone Number/short description on project . We shall get back to you soon.</center></p>
-      <?php echo do_shortcode('[formidable id=7]'); ?>
+      <?php echo do_shortcode('[formidable id=9]'); ?>
     </div>
     <a href="javascript:void(0);" id="back-to-top" title="Back to top">&uarr;</a>
     <a href="javascript: void(0);" data-placement="top" data-toggle="popover" data-trigger="click" title="CONTACT US" data-content="" class="contact-us"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+    <!--<a href="javascript: void(0);" data-toggle="modal" data-target="#contactFormModal" class="contact-us"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>-->
+    
+    <div class="modal fade" id="contactFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+          </div>
+          <div class="modal-body">
+            <p><center>Please share your Phone Number/short description on project . We shall get back to you soon.</center></p>
+            <?php echo do_shortcode('[formidable id=9]'); ?>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

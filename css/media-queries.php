@@ -4,6 +4,11 @@ $path=str_replace('index.php','',$parse_uri[0]);
 require( $path . 'wp-load.php' );
 header("Content-type: text/css; charset: UTF-8");
 ?>
+@media only screen and (min-width: 992px) {
+	.crellyslider-slider {
+	    margin-top: -1%;
+	}
+}
 @media only screen and (min-width: 768px) {
 	#primary-nav-wrapper li a{
 		padding-left: 0 !important;
@@ -29,6 +34,9 @@ header("Content-type: text/css; charset: UTF-8");
 	}
 	form#commentform .comment-form-email{
 		margin-left: 2%;
+	}
+	.crellyslider-slider {
+	    margin-top: -1.5%;
 	}
 }
 
