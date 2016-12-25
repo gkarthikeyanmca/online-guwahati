@@ -34,7 +34,7 @@
 									<div class="share-icons">
 										<a href=""><i class="fa fa-print" aria-hidden="true"></i></a>
 										<a href="javascript: void(0);" data-placement="bottom" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="single-post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-										<a href=""><i class="fa fa-comments-o" aria-hidden="true"></i> 2</a>
+										<a href="#comments-scroll"><i class="fa fa-comments-o" aria-hidden="true"></i> <?php comments_number( 0, 1, '%' ); ?></a>
 										<?php
 			                                $count=get_post_meta(get_the_ID(),'loved',true);
 			                                if($count==''){
@@ -101,10 +101,16 @@
 			endif;
 		?>		
 	</div>
-
-	<div class="row section-wrapper comments-wrapper">
+	
+	<div class="row section-wrapper comments-wrapper" id="comments-scroll">
 		<div class="col-lg-12">
-			<?php comments_template(); ?> 
+			<?php
+				if(have_posts()):
+					while(have_posts()): the_post();
+						comments_template();
+					endwhile;
+				endif;
+			?> 
 		</div>
 	</div>
 </div>

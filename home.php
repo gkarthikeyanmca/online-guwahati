@@ -20,7 +20,7 @@
 									<div class="pull-right">
 										<ul>
 											<li><a href="javascript: void(0);" share-html="<?php echo $count; ?>" data-placement="top" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
-											<li><a href=""><i class="fa fa-comments-o" aria-hidden="true"></i><br/>2</a></li>
+											<li><a href="<?php echo get_permalink(); ?>#comments-scroll"><i class="fa fa-comments-o" aria-hidden="true"></i><br/><?php comments_number( 0, 1, '%' ); ?></a></li>
 											<?php
 				                                $lcount=get_post_meta(get_the_ID(),'loved',true);
 				                                if($lcount==''){
