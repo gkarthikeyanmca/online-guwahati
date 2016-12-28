@@ -4,7 +4,7 @@ $path=str_replace('index.php','',$parse_uri[0]);
 require( $path . 'wp-load.php' );
 header("Content-type: text/css; charset: UTF-8");
 ?>
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 body{
 	font-family: 'Raleway', sans-serif;
 	margin-top: 130px;
@@ -51,6 +51,13 @@ p{
 	.topnav-wrapper a{
 		color: #fff;
 	}
+	.topnav-email i{
+		font-weight: 800;
+		font-size: 15px;
+	}
+	.topnav-email a{
+		text-decoration: none;
+	}
 .topnav-email,.topnav-social-icons{
 	float: right;
 }
@@ -82,7 +89,7 @@ body.logged-in nav.navbar{
 .primary-nav li a{
 	text-transform: uppercase;
 	font-weight: 600;
-	color: #000 !important;
+	color: #2e2e2e !important;
 }
 .blue-bar-toggle{
     text-align: center;
@@ -248,7 +255,10 @@ body.logged-in nav.navbar{
 	}
 		.case-study-wrapper h4 a{
 			text-decoration: none;
-			color: #000;
+		    color: #2e2e2e;
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		    font-size: 15px;
 		}
 		.case-study-wrapper h4 a:hover{
 			color: #f97352;
@@ -293,11 +303,11 @@ body.logged-in nav.navbar{
 			.case-study-wrapper .read-more-wrapper .loved-it i{
 				font-size: 14px;
 			}
-			.case-study-wrapper .read-more-wrapper .loved-it span.loved-count {
+			.case-study-wrapper .read-more-wrapper .loved-it .loved-count {
 			    vertical-align: top;
 			    font-weight: 400;
 			}
-			a.loved-it:hover span.loved-count {
+			a.loved-it:hover .loved-count {
 			    color: #f97352;
 			}
 .colored-block{
@@ -333,10 +343,20 @@ body.logged-in nav.navbar{
 #contact-form div.row{
 	margin-top: 30px;
 }
-	#contact-form div.row input,
-	#contact-form div.row textarea{
-		border-radius: 0;
+	.home_contact_form input,
+	.home_contact_form select,
+	.home_contact_form textarea{
+		border-radius: 0 !important;
 	}
+	.home_contact_form .frm_submit input{
+		background: <?php the_field('brand_color','option'); ?> !important;
+		color: #fff !important;
+		padding: 15px 20px !important;
+		text-transform: uppercase;
+		border: 0;
+		box-shadow: 0 0 0 0;
+	}
+
 
 /* Single Page */
 .single-title-wrapper{
@@ -350,13 +370,17 @@ body.logged-in nav.navbar{
 	}
 	.single-post .section-wrapper h3{
 		text-transform: uppercase;
-		color: #000;
+		color: #2e2e2e;
 	}
 	.single-post .post-meta-wrapper{
 		margin-top: 25px;
 		margin-bottom: 25px;
 		font-style: italic;
 	}
+		.single-post .print-contents img{
+			min-width: 100%;
+			height: auto;
+		}
 		.single-post .post-meta-wrapper .share-icons{
 			text-align: right;
 			font-style: normal;
@@ -421,7 +445,9 @@ body.logged-in nav.navbar{
 		}
 		.single-post .recent-posts-wrapper .thumbnail h5{
 			text-transform: uppercase;
-			font-weight: 800;
+			font-weight: 700;
+			font-size: 13px;
+			letter-spacing: 1px;
 		}
 		.single-post .recent-posts-wrapper h4{
 			margin-bottom: 40px;
@@ -623,8 +649,10 @@ h3.comment-reply-title,.comment-notes{
     height: 32px;
     text-align: center;
     line-height: 30px;
-    background: #f5f5f5;
-    color: #444;
+    /*background: #f5f5f5;*/
+    background: rgba(0,0,0,0.3);
+    /*color: #444;*/
+    color: #fff;
     cursor: pointer;
     border: 0;
     border-radius: 2px;
@@ -640,7 +668,7 @@ h3.comment-reply-title,.comment-notes{
     color: #fff;
 }
 #back-to-top:hover {
-    background: #e9ebec;
+    /*background: #e9ebec;*/
 }
 #back-to-top.show {
     opacity: 1;
@@ -659,3 +687,8 @@ h3.comment-reply-title,.comment-notes{
 #recaptcha_image { width:auto !important; max-width: 100%;}
 #recaptcha_image img { width:100% ;}
 #recaptcha_response_field { width: 100% !important; max-width: 100%; }
+
+//Tooltip
+div.tooltip.bottom{
+	z-index: 99999;
+}

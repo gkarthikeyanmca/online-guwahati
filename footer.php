@@ -106,7 +106,8 @@
       <p><center>Please share your Phone Number/short description on project . We shall get back to you soon.</center></p>
       <?php echo do_shortcode('[formidable id=9]'); ?>
     </div>
-    <a href="javascript:void(0);" id="back-to-top" title="Back to top">&uarr;</a>
+    <!--<a href="javascript:void(0);" id="back-to-top" title="Back to top">&uarr;</a>-->
+    <a href="javascript:void(0);" id="back-to-top" title="Back to top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
     <a href="javascript: void(0);" data-placement="top" data-toggle="popover" data-trigger="click" title="CONTACT US" data-content="" class="contact-us"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
     <!--<a href="javascript: void(0);" data-toggle="modal" data-target="#contactFormModal" class="contact-us"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>-->
     

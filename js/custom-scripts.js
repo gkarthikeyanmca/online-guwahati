@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
         html: true,
         content: function () {
             var cform=jQuery('.contact-us-form').html();
-            return cform;
+            return cform;           
         }
     });
 
@@ -67,15 +67,14 @@ jQuery(document).ready(function($){
     }
 
     $(document).on('click','#menu-primary-nav li.dropdown a',function(e){
-        //alert(1);
-        //e.preventDefault();
-        //jQuery(this).css('background-color','#fff !important');
-        //jQuery(this).css('background','#fff !important');
-        //jQuery(this).attr('background','#fff !important');
         if($( window ).width() >= 768){
             jQuery(this).parents('li.dropdown').removeClass('open');
         }
+        if($(this).attr('href')!='' || $(this).attr('href')!='#'){
+            location.href=$(this).attr('href');
+        }
     });
+
 });
 function printDiv(divName) {
     var printContents = document.getElementById(divName).innerHTML;

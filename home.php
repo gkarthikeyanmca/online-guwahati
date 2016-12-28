@@ -20,14 +20,14 @@
 									<div class="pull-right">
 										<ul>
 											<li><a href="javascript: void(0);" share-html="<?php echo $count; ?>" data-placement="top" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
-											<li><a href="<?php echo get_permalink(); ?>#comments-scroll"><i class="fa fa-comments-o" aria-hidden="true"></i><br/><?php comments_number( 0, 1, '%' ); ?></a></li>
+											<li><a href="<?php echo get_permalink(); ?>#comments-scroll"><i class="fa fa-comments-o" aria-hidden="true"></i><br/><div><center><?php comments_number( 0, 1, '%' ); ?></center></div></a></li>
 											<?php
 				                                $lcount=get_post_meta(get_the_ID(),'loved',true);
 				                                if($lcount==''){
 				                                  $lcount=0;
 				                                }
 				                            ?>
-											<li><a href="javascript:void(0);" class="loved-it" pid="<?php the_ID(); ?>"><i class="fa fa-heart" aria-hidden="true"></i><br/><span class="loved-count"><?php echo $lcount; ?></span></a></li>
+											<li><a href="javascript:void(0);" class="loved-it" pid="<?php the_ID(); ?>"><i class="fa fa-heart" aria-hidden="true"></i><br/><div class="loved-count"><center><?php echo $lcount; ?></center></div></a></li>
 										</ul>
 									</div>
 								</div>
