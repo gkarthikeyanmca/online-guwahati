@@ -19,7 +19,7 @@
 				if(have_posts()):
 					while(have_posts()): the_post();
 						?>
-						<div>
+						<div id="print-contents">
 							<div><?php the_post_thumbnail('blog-single',array( 'class' => 'img-responsive' )); ?></div>
 							<h3 class="print_title"><strong><?php the_title(); ?></strong></h3>
 							<div class="row post-meta-wrapper">
@@ -32,7 +32,7 @@
 								</div>
 								<div class="col-sm-4 col-xs-12">
 									<div class="share-icons">
-										<a class="print" href="javascript: void(0);"><i class="fa fa-print" aria-hidden="true"></i></a>
+										<a class="print" href="javascript: void(0);" onclick="printDiv('print-contents')"><i class="fa fa-print" aria-hidden="true"></i></a>
 										<a href="javascript: void(0);" data-placement="bottom" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="single-post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
 										<a href="#comments-scroll"><i class="fa fa-comments-o" aria-hidden="true"></i> <?php comments_number( 0, 1, '%' ); ?></a>
 										<?php

@@ -149,7 +149,7 @@ if( have_rows('home_layout') ):
                             <?php the_post_thumbnail('home-blog-image'); ?>
                             <div class="thumbnail">
                               <div class="caption">
-                                <h4><?php the_title(); ?></h4>
+                                <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                 <p class="date"><a href=""><?php echo get_the_date('F j, Y'); ?></a></p>
                                 <?php the_excerpt(); ?>
                               </div>

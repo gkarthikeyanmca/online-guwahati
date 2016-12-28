@@ -72,6 +72,21 @@ jQuery(document).ready(function($){
         //jQuery(this).css('background-color','#fff !important');
         //jQuery(this).css('background','#fff !important');
         //jQuery(this).attr('background','#fff !important');
-        //jQuery(this).parents('li.dropdown').find('ul').hide();
+        if($( window ).width() >= 768){
+            jQuery(this).parents('li.dropdown').removeClass('open');
+        }
     });
 });
+function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    /*var winPrint = window.open();
+    winPrint.document.write(printContents);
+    winPrint.document.close();
+    winPrint.focus();
+    winPrint.print();
+    winPrint.close();*/
+}

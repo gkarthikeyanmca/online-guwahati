@@ -39,6 +39,9 @@ hr.title-underline{
 body.logged-in .topnav-fixed{
 	top: 29px;
 }
+p{
+	word-break: break-all;
+}
 .topnav-wrapper{
 	background: <?php the_field('brand_color','option'); ?>;
 	color: #fff;
@@ -166,7 +169,7 @@ body.logged-in nav.navbar{
 		margin-top: 40px;
 	}
 	.section-wrapper .tabs-wrapper{
-		margin-top: 40px;
+		margin-top: 30px;
 	}
 		.section-wrapper .tabs-wrapper .nav-tabs{
 			border: 0;
@@ -174,6 +177,7 @@ body.logged-in nav.navbar{
 			.section-wrapper .tabs-wrapper .nav-tabs li{
 				border: 0;
 				margin-right: 50px;
+				margin-top: 20px;
 			}
 			.section-wrapper .tabs-wrapper .nav-tabs>li:last-child{
 				margin-right: 0;
@@ -242,6 +246,13 @@ body.logged-in nav.navbar{
 	.case-study-wrapper h4{
 		font-weight: 600;
 	}
+		.case-study-wrapper h4 a{
+			text-decoration: none;
+			color: #000;
+		}
+		.case-study-wrapper h4 a:hover{
+			color: #f97352;
+		}
 	.case-study-wrapper p{
 		color: #777;
 		line-height: 1.5em;
@@ -257,6 +268,9 @@ body.logged-in nav.navbar{
 			font-size: 10px;
 			text-decoration: none;
 		}
+	.case-study-wrapper .caption{
+		min-height: 280px;
+	}
 	.case-study-wrapper .read-more-wrapper{
 		padding: 15px;
 		border-left: 1px solid #ddd;
@@ -267,14 +281,24 @@ body.logged-in nav.navbar{
 			color: #252525;
 			font-size: 12px;
 			font-weight: 600;
+			text-decoration: none;
 		}
-		.case-study-wrapper .read-more-wrapper .loved-it{
+		.case-study-wrapper .read-more-wrapper a.loved-it{
 			color: #898989;
 			font-size: 12px;
 			font-weight: 600;
+			text-decoration: none;
+			letter-spacing: 1px;
 		}
 			.case-study-wrapper .read-more-wrapper .loved-it i{
 				font-size: 14px;
+			}
+			.case-study-wrapper .read-more-wrapper .loved-it span.loved-count {
+			    vertical-align: top;
+			    font-weight: 400;
+			}
+			a.loved-it:hover span.loved-count {
+			    color: #f97352;
 			}
 .colored-block{
 	padding-bottom: 40px;
@@ -391,6 +415,9 @@ body.logged-in nav.navbar{
 		}
 		.single-post .recent-posts-wrapper .thumbnail a{
 			text-decoration: none;
+		}
+		.single-post .recent-posts-wrapper .thumbnail h5:hover{
+			color: #f97352;
 		}
 		.single-post .recent-posts-wrapper .thumbnail h5{
 			text-transform: uppercase;

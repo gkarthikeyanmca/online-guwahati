@@ -30,7 +30,7 @@
       <div class="container-fluid topnav-wrapper">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 col-sm-12">              
+            <div class="col-md-8 col-sm-12">
               <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 
               <?php
                 if(have_rows('phone_numbers','option')):
@@ -44,9 +44,10 @@
                 endif;
               ?>
               <div class="topnav-email">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <strong><i class="fa fa-envelope-o" aria-hidden="true"></i></strong>
                 <a href="mailto:<?php the_field('email','option'); ?>"><?php the_field('email','option'); ?></a>
               </div>
+              <div class="clearfix"></div>
             </div>
             <div class="col-md-4 col-sm-12">
               <div class="topnav-social-icons">
@@ -79,7 +80,7 @@
             if($logo_id!=''){
               $img=wp_get_attachment_image_src($logo_id,'logo-image');
               ?>
-              <a class="navbar-brand" href="#"><img src="<?php echo $img[0]; ?>" /></a>
+              <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo $img[0]; ?>" /></a>
               <?php
             }
           ?>

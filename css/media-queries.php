@@ -125,3 +125,8 @@ header("Content-type: text/css; charset: UTF-8");
 		margin-top: 50px;
 	}
 }
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}
