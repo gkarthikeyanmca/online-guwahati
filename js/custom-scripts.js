@@ -65,4 +65,13 @@ jQuery(document).ready(function($){
             }, 700);
         });
     }
+
+    $(document).on('click','#menu-primary-nav li.dropdown a',function(e){
+        //alert(1);
+        //e.preventDefault();
+        //jQuery(this).css('background-color','#fff !important');
+        //jQuery(this).css('background','#fff !important');
+        //jQuery(this).attr('background','#fff !important');
+        //jQuery(this).parents('li.dropdown').find('ul').hide();
+    });
 });

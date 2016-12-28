@@ -50,10 +50,10 @@
             </div>
             <div class="col-md-4 col-sm-12">
               <div class="topnav-social-icons">
-                <a href="<?php the_field('facebook_url','option'); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="<?php the_field('twitter_url','option'); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="<?php the_field('google_plus_url','option'); ?>"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                <a href="<?php the_field('linkedin_url','option'); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="<?php the_field('facebook_url','option'); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a target="_blank" href="<?php the_field('twitter_url','option'); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="<?php the_field('google_plus_url','option'); ?>"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a target="_blank" href="<?php the_field('linkedin_url','option'); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>

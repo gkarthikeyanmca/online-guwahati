@@ -86,6 +86,9 @@ body.logged-in nav.navbar{
     height: 0;
     margin-top: -6px;
 }
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: #fff !important;
+}
 
 /* Footer */
 .footer-wrapper{

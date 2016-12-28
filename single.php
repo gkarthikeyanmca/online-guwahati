@@ -21,7 +21,7 @@
 						?>
 						<div>
 							<div><?php the_post_thumbnail('blog-single',array( 'class' => 'img-responsive' )); ?></div>
-							<h3><strong><?php the_title(); ?></strong></h3>
+							<h3 class="print_title"><strong><?php the_title(); ?></strong></h3>
 							<div class="row post-meta-wrapper">
 								<div class="col-sm-8 col-xs-12">
 									<?php
@@ -32,7 +32,7 @@
 								</div>
 								<div class="col-sm-4 col-xs-12">
 									<div class="share-icons">
-										<a href=""><i class="fa fa-print" aria-hidden="true"></i></a>
+										<a class="print" href="javascript: void(0);"><i class="fa fa-print" aria-hidden="true"></i></a>
 										<a href="javascript: void(0);" data-placement="bottom" data-toggle="popover" data-trigger="click" title="Dismissible popover" data-content="" class="single-post-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
 										<a href="#comments-scroll"><i class="fa fa-comments-o" aria-hidden="true"></i> <?php comments_number( 0, 1, '%' ); ?></a>
 										<?php
@@ -45,14 +45,15 @@
 									</div>
 								</div>
 								<div id="share-html" style="display:none;">
-									<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-									<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-									<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-									<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-									<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+									<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="http://twitter.com/home?status=<?php the_title(); ?>+<?php the_permalink(); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=http://onlineguwahati.com/dev"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+									<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+									<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" href="https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&amp;media=<?php the_post_thumbnail_url(); ?>"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
 								</div>
 							</div>
-							<?php the_content(); ?>
+							
+							<div class="print_area"><?php the_content(); ?></div>
 						</div>
 						<?php
 						$author_id=get_the_author_meta( 'ID' );
