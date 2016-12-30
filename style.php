@@ -692,3 +692,8 @@ h3.comment-reply-title,.comment-notes{
 div.tooltip.bottom{
 	z-index: 99999;
 }
+
+//Chat
+body.gallery.bottom.right{
+	display: none;
+}
